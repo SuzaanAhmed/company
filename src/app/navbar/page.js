@@ -4,6 +4,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
     <div>
@@ -34,19 +35,13 @@ export default function Navbar() {
             ☰
           </button>
 
-          <nav className="hidden md:block">
-            <ul className="flex gap-6 text-sm font-semibold text-black mr-50">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/about-us", label: "About Us" },
-                { href: "/services", label: "Services" },
-                { href: "/blog", label: "Blog" },
-                { href: "/contact", label: "Contact" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="p-4 relative 
+          <nav className="hidden md:flex mr-10">
+            <ul className="flex items-center gap-6 text-sm font-semibold text-black relative">
+              {/* Home */}
+              <li>
+                <Link
+                  href="/"
+                  className="p-4 relative 
                     after:content-[''] 
                     after:absolute 
                     after:left-1/2 
@@ -61,10 +56,119 @@ export default function Navbar() {
                     hover:text-[#0891b2] 
                     hover:after:w-full"
                 >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+                  Home
+                </Link>
+              </li>
+
+              {/* About Us */}
+              <li>
+                <Link
+                  href="/about-us"
+                  className="p-4 relative 
+                    after:content-[''] 
+                    after:absolute 
+                    after:left-1/2 
+                    after:-translate-x-1/2 
+                    after:-bottom-1 
+                    after:h-0.5 
+                    after:w-0 
+                    after:bg-[#0891b2] 
+                    after:transition-all 
+                    after:duration-300 
+                    after:origin-center 
+                    hover:text-[#0891b2] 
+                    hover:after:w-full"
+                >
+                  About Us
+                </Link>
+              </li>
+
+              {/* Services Dropdown */}
+              <li className="relative">
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="p-4 relative 
+                    after:content-[''] 
+                    after:absolute 
+                    after:left-1/2 
+                    after:-translate-x-1/2 
+                    after:-bottom-1 
+                    after:h-0.5 
+                    after:w-0 
+                    after:bg-[#0891b2] 
+                    after:transition-all 
+                    after:duration-300 
+                    after:origin-center 
+                    hover:text-[#0891b2] 
+                    hover:after:w-full"
+                >
+                  Services
+                </button>
+                {servicesOpen && (
+                  <ul className="absolute top-full left-0 bg-white shadow-md rounded-md mt-1 py-1 w-40 z-50">
+                    {["Service 1", "Service 2", "Service 3", "Service 4"].map(
+                      (service, index) => (
+                        <li key={index}>
+                          <Link
+                            href={`/services/${index + 1}`}
+                            className="block px-4 py-2 text-sm text-black hover:bg-[#0891b2] hover:text-white transition-colors"
+                          >
+                            {service}
+                          </Link>
+                        </li>
+                      )
+                    )}
+                  </ul>
+                )}
+              </li>
+
+              {/* Blog */}
+              <li>
+                <Link
+                  href="/blog"
+                  className="p-4 relative 
+                    after:content-[''] 
+                    after:absolute 
+                    after:left-1/2 
+                    after:-translate-x-1/2 
+                    after:-bottom-1 
+                    after:h-0.5 
+                    after:w-0 
+                    after:bg-[#0891b2] 
+                    after:transition-all 
+                    after:duration-300 
+                    after:origin-center 
+                    hover:text-[#0891b2] 
+                    hover:after:w-full"
+                >
+                  Blog
+                </Link>
+              </li>
+
+              {/* Contact */}
+              <li>
+                <Link
+                  href="/contact"
+                  className="p-4 relative 
+                    after:content-[''] 
+                    after:absolute 
+                    after:left-1/2 
+                    after:-translate-x-1/2 
+                    after:-bottom-1 
+                    after:h-0.5 
+                    after:w-0 
+                    after:bg-[#0891b2] 
+                    after:transition-all 
+                    after:duration-300 
+                    after:origin-center 
+                    hover:text-[#0891b2] 
+                    hover:after:w-full"
+                >
+                  Contact
+                </Link>
+              </li>
+
+              {/* Call Us Now */}
               <li>
                 <Link
                   href="/Call"
