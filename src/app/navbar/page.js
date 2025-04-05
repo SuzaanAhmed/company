@@ -46,7 +46,17 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="p-4 relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#0891b2] after:transition-all after:duration-300 hover:text-[#0891b2] hover:after:w-full"
+                    className="p-4 relative after:content-[''] 
+                    after:absolute 
+                    after:left-0 
+                    after:-bottom-1 
+                    after:h-0.5 
+                    after:w-0 
+                    after:bg-[#0891b2] 
+                    after:transition-all 
+                    after:duration-300 
+                    hover:text-[#0891b2] 
+                    hover:after:w-full"
                   >
                     {link.label}
                   </Link>
