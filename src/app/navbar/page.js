@@ -7,7 +7,6 @@ export default function Navbar() {
 
   return (
     <div>
-      {/* Top bar */}
       <header className="bg-[#0891b2] flex flex-col md:flex-row px-4 py-2 gap-4 md:gap-6 justify-between items-center text-lg">
         <div className="flex flex-row gap-5 items-center lg:ml-35 md:ml-20">
           <img src="instagram.png" alt="Instagram" className="h-5 w-5" />
@@ -28,7 +27,6 @@ export default function Navbar() {
             <img src="logo.png" alt="Logo" className="ml-35 h-30 w-35" />
           </div>
 
-          {/* Hamburger toggle button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden text-black text-3xl mr-5"
@@ -36,7 +34,6 @@ export default function Navbar() {
             ☰
           </button>
 
-          {/* Desktop Nav */}
           <nav className="hidden md:block">
             <ul className="flex gap-6 text-sm font-semibold text-black mr-50">
               {[
@@ -67,7 +64,6 @@ export default function Navbar() {
           </nav>
         </div>
 
-        {/* Mobile Nav (dropdown) */}
         {menuOpen && (
           <nav className="md:hidden mt-2">
             <ul className="flex flex-col gap-2 text-sm font-semibold text-black">
