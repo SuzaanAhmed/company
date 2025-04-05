@@ -47,17 +47,20 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className="p-4 relative 
+                    after:content-[''] 
                     after:absolute 
-                    after:left-0 
+                    after:left-1/2 
+                    after:-translate-x-1/2 
                     after:-bottom-1 
                     after:h-0.5 
                     after:w-0 
                     after:bg-[#0891b2] 
                     after:transition-all 
                     after:duration-300 
+                    after:origin-center 
                     hover:text-[#0891b2] 
                     hover:after:w-full"
-                  >
+                >
                     {link.label}
                   </Link>
                 </li>
