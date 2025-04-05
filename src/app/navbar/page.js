@@ -5,28 +5,29 @@ import Link from "next/link";
 export default function Navbar() {
     return (
         <div>
-            <header className="bg-[#0891b2] flex flex-row p-4 gap-6 justify-between items-center text-lg">
-  <div className="flex flex-row gap-5 items-center ml-20">
-    <img src="instagram.png" alt="Instagram" className="h-5 w-5" />
-    <img src="facebook.png" alt="Facebook" className="h-5 w-5" />
-    <img src="linkedin.png" alt="LinkedIn" className="h-5 w-5" />
-  </div>
+            {/* Top social + contact bar */}
+            <header className="bg-[#0891b2] flex flex-col md:flex-row p-4 gap-4 md:gap-6 justify-between items-center text-lg">
+                <div className="flex flex-row gap-5 items-center ml-0 md:ml-20">
+                    <img src="instagram.png" alt="Instagram" className="h-5 w-5" />
+                    <img src="facebook.png" alt="Facebook" className="h-5 w-5" />
+                    <img src="linkedin.png" alt="LinkedIn" className="h-5 w-5" />
+                </div>
 
-  <div className="flex flex-row gap-4 text-black text-base text-md items-center mr-20">
-    <span>+91 1234567890</span>
-    <span className="text-xl">|</span>
-    <span>myEmail@subdomain.domain</span>
-  </div>
-</header>
+                <div className="flex flex-row gap-4 text-black text-base text-md items-center mr-0 md:mr-20">
+                    <span>+91 1234567890</span>
+                    <span className="text-xl">|</span>
+                    <span>myEmail@subdomain.domain</span>
+                </div>
+            </header>
 
-
-            <div className="flex items-center justify-between bg-white p-2 shadow-md">
-                <div className="flex items-center">
+            {/* Main nav bar */}
+            <div className="flex flex-col md:flex-row items-center justify-between bg-white p-2 shadow-md">
+                <div className="flex items-center mb-2 md:mb-0">
                     <img src="logo.png" alt="Logo" className="ml-35 h-30 w-35" />
                 </div>
 
                 <nav>
-                    <ul className="flex gap-6 text-sm font-semibold text-black mr-50">
+                    <ul className="flex flex-col md:flex-row gap-4 md:gap-6 text-sm font-semibold text-black md:mr-50 items-center">
                         {[
                             { href: "/", label: "Home" },
                             { href: "/about-us", label: "About Us" },
