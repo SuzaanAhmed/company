@@ -8,8 +8,8 @@ export default function Navbar() {
   return (
     <div>
       {/* Top bar */}
-      <header className="bg-[#0891b2] flex flex-col md:flex-row p-4 gap-4 md:gap-6 justify-between items-center text-lg">
-        <div className="flex flex-row gap-5 items-center ml-0 md:ml-20">
+      <header className="bg-[#0891b2] flex flex-col md:flex-row px-4 py-2 gap-4 md:gap-6 justify-between items-center text-lg">
+        <div className="flex flex-row gap-5 items-center lg:ml-35 md:ml-20">
           <img src="instagram.png" alt="Instagram" className="h-5 w-5" />
           <img src="facebook.png" alt="Facebook" className="h-5 w-5" />
           <img src="linkedin.png" alt="LinkedIn" className="h-5 w-5" />
@@ -22,7 +22,6 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Main navbar */}
       <div className="bg-white p-2 shadow-md">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
