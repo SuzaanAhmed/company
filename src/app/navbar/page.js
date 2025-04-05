@@ -46,7 +46,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="p-4 relative after:content-[''] 
+                    className="p-4 relative 
                     after:absolute 
                     after:left-0 
                     after:-bottom-1 
@@ -65,7 +65,7 @@ export default function Navbar() {
               <li>
                 <Link
                   href="/Call"
-                  className="bg-[#0891b2] hover:bg-red-500 text-white px-6 py-4 text-sm rounded-full transition-colors"
+                  className="bg-[#0891b2] hover:bg-red-500 text-white px-7 py-3 text-sm rounded-full transition-colors"
                 >
                   Call Us Now
                 </Link>
